@@ -1,0 +1,132 @@
+body {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 2fr 3fr 2fr;
+	grid-template-rows: 30px 150px 4fr 1fr;
+	background-color: #282828;
+	color: #616468;
+}
+
+.navBar {
+	grid-column: 1 / span 3;
+	display: flex;
+}
+
+header {
+	grid-column: 2;
+}
+
+h2 {
+	margin: 0;
+}
+
+header h2 {
+	color: white;
+}
+
+/* ////////////// GAME BOARD ///////////// */
+
+.gameboard {
+	grid-column: 2;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	height: 70vmin;
+	width: 70vmin;
+	margin: auto;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	border: 5px solid;
+	margin: 10px;
+	border-radius: 20px;
+}
+
+/* ////////////// SCOREBOARD ///////////// */
+
+.scoreboard {
+	margin: 15px;
+	background-color: #1e1e1e;
+	border-radius: 20px;
+	grid-column: 3;
+	min-width: 280px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.highScore,
+.score {
+	font-size: 5em;
+	color: white;
+	margin: 0;
+}
+
+/* ////////////// BUTTONS ///////////// */
+
+button {
+	width: 120px;
+	height: 50px;
+	border: none;
+	background-color: black;
+	color: white;
+	outline: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.resetBtn {
+	border: 3px solid #616468;
+	background-color: #1e1e1e;
+	color: #616468;
+}
+.resetBtn:hover {
+	color: white;
+}
+
+#openHowToPlay {
+	background-color: #282828;
+	margin-left: 20px;
+	color: #616468;
+}
+
+#openHowToPlay:hover {
+	border-radius: 0;
+	color: white;
+}
+
+/* ////////////// HOW TO PAGE ///////////// */
+
+#howToPage {
+	background-color: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+	display: none;
+}
+
+#howTo-textbox {
+	background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	padding: 2%;
+	line-height: 120%;
+	font-family: arial;
+}
+
+#howToFooter {
+	text-align: right;
+}
