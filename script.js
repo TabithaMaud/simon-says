@@ -1,11 +1,3 @@
-/* THOUGHTS */
-
-//BLEND MODE?? BACKGROUND-COLOR-BLEND MODE IN CSS
-//if arrayOrder[i] === playerChoice[i] then true, else game over
-
-//**HOW TO DISPLAY COMPUTER CHOICES IN SEQUENCE AUTOMATICALLY??**
-
-//
 const openBtn = document.querySelector('#openHowToPlay');
 const howToPage = document.querySelector('#howToPage');
 const close = document.querySelector('#close');
@@ -16,12 +8,12 @@ const boxes = document.querySelectorAll('.box');
 const startBtn = document.querySelector('.startBtn');
 const resetBtn = document.querySelector('.resetBtn');
 
-let levelTracker = document.querySelector('.levelTracker');
-let highScoreTracker = document.querySelector('.highScore');
+const levelTracker = document.querySelector('.levelTracker');
+const highScoreTracker = document.querySelector('.highScore');
 let highScore = 0;
-let score = document.querySelector('.score');
+const score = document.querySelector('.score');
 let currentScore = 0;
-let message = document.querySelector('h2');
+const message = document.querySelector('h2');
 let level = 1;
 
 let computerArray = [];
@@ -29,6 +21,25 @@ let playerChoice = [];
 
 let colorChoices = ['red', 'blue', 'green', 'yellow'];
 let newColor;
+
+let gameVolume = document.querySelector('i');
+
+gameVolume.addEventListener('click', muteGame);
+
+function muteMe(sound) {
+	if (sound.muted === false) {
+		gameVolume.setAttribute('class', 'fa fa-volume-off');
+		sound.muted = true;
+		sound.pause();
+	} else {
+		sound.muted = false;
+		gameVolume.setAttribute('class', 'fa fa-volume-up');
+	}
+}
+
+function muteGame() {
+	document.querySelectorAll('audio').forEach((sound) => muteMe(sound));
+}
 
 startBtn.addEventListener('click', startGame);
 
