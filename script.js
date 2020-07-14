@@ -23,6 +23,8 @@ let score = document.querySelector('.score');
 let currentScore = 0;
 let message = document.querySelector('h2');
 
+const sound1 = document.getElementById('sound1');
+
 let computerArray = [];
 let playerChoice = [];
 let level = 1;
@@ -50,24 +52,28 @@ function displayExistingColors() {
 		setTimeout(function () {
 			if (computerArray[i] === 'red') {
 				boxes[0].style.backgroundColor = 'red';
+				sound1.play();
 				setTimeout(function () {
 					boxes[0].style.background = '';
 				}, 1000);
 			}
 			if (computerArray[i] === 'blue') {
 				boxes[1].style.backgroundColor = 'blue';
+				sound2.play();
 				setTimeout(function () {
 					boxes[1].style.background = '';
 				}, 1000);
 			}
 			if (computerArray[i] === 'green') {
 				boxes[2].style.backgroundColor = 'green';
+				sound3.play();
 				setTimeout(function () {
 					boxes[2].style.background = '';
 				}, 1000);
 			}
 			if (computerArray[i] === 'yellow') {
 				boxes[3].style.backgroundColor = 'yellow';
+				sound4.play();
 				setTimeout(function () {
 					boxes[3].style.background = '';
 				}, 1000);
@@ -84,6 +90,17 @@ function handlePlayerClick(e) {
 			let color = e.target.dataset.color;
 			e.target.style.backgroundColor = color;
 			playerChoice.push(color);
+			if (color === 'red') {
+				sound1.play();
+			}
+			if (color === 'blue') {
+				sound2.play();
+			}
+			if (color === 'green') {
+				sound3.play();
+			} else {
+				sound4.play();
+			}
 			setTimeout(function () {
 				e.target.style.backgroundColor = '';
 			}, 500);

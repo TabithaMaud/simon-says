@@ -5,7 +5,7 @@ body {
 	display: grid;
 	grid-template-columns: 2fr 3fr 2fr;
 	grid-template-rows: 30px 150px 4fr 1fr;
-	background-color: #282828;
+	background-color: hsl(0, 0%, 16%);
 	color: #616468;
 }
 
@@ -16,15 +16,16 @@ body {
 
 header {
 	grid-column: 2;
+	color: white;
 }
 
 h2 {
 	margin: 0;
 }
 
-header h2 {
-	color: white;
-}
+/* header h2 {
+
+} */
 
 /* ////////////// GAME BOARD ///////////// */
 
@@ -47,6 +48,22 @@ header h2 {
 	border-radius: 20px;
 }
 
+.box:nth-of-type(1) {
+	background-color: rgb(255, 0, 0, 0.1);
+}
+
+.box:nth-of-type(2) {
+	background-color: rgb(0, 0, 255, 0.1);
+}
+
+.box:nth-of-type(3) {
+	background-color: rgb(0, 255, 0, 0.1);
+}
+
+.box:nth-of-type(4) {
+	background-color: rgb(255, 255, 0, 0.15);
+}
+
 /* ////////////// SCOREBOARD ///////////// */
 
 .scoreboard {
@@ -66,6 +83,12 @@ header h2 {
 	font-size: 5em;
 	color: white;
 	margin: 0;
+}
+
+.scoreboard > h2 {
+	padding-bottom: 10px;
+	padding: 0px 30px 10px 30px;
+	border-bottom: 3px solid #616468;
 }
 
 /* ////////////// BUTTONS ///////////// */
