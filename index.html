@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Simon Says Pick A Color</title>
+	</head>
+	<body>
+		<div class="navBar">
+			<button class="howToPlayBtns" id="openHowToPlay">
+				how to play
+			</button>
+		</div>
+		<div id="howToPage">
+			<div id="howTo-textbox">
+				<h1>Learn how to play!</h1>
+				<p>
+					Simon Says Pick A Color is a game for players to test their memory
+					skills. The game starts with one of four colors lighting up, this will
+					be the color that you will need to remember to click next. The second
+					round the first color will light up again followed by a new color. You
+					will then need to remember the order of the two colors and then click
+					them in the correct sequence. Each new level one new color will be
+					added to the end of the sequence.
+				</p>
+				<p>
+					Each time you make a correct selection your score will increase by
+					one. Good luck!
+				</p>
+				<div id="howToFooter">
+					<button class="howToPlayBtns" id="close">Close</button>
+				</div>
+			</div>
+		</div>
+
+		<header>
+			<h1>Simon Says Pick A Color</h1>
+			<button class="startBtn">START</button>
+			<h2></h2>
+		</header>
+		<main class="gameboard">
+			<div class="box" data-color="red"></div>
+			<div class="box" data-color="blue"></div>
+			<div class="box" data-color="green"></div>
+			<div class="box" data-color="yellow"></div>
+		</main>
+
+		<container class="scoreboard">
+			<h2>Level: <span class="levelTracker">1</span></h2>
+			<div>
+				<h2 class="highScoreTracker">High Score</h2>
+				<p class="highScore">0</p>
+			</div>
+			<div>
+				<h2>Current Score</h2>
+				<p class="score">0</p>
+			</div>
+
+			<button class="resetBtn">RESET</button>
+		</container>
+
+		<script src="script.js"></script>
+	</body>
+</html>
