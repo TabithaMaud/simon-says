@@ -22,12 +22,10 @@ let highScore = 0;
 let score = document.querySelector('.score');
 let currentScore = 0;
 let message = document.querySelector('h2');
-
-const sound1 = document.getElementById('sound1');
+let level = 1;
 
 let computerArray = [];
 let playerChoice = [];
-let level = 1;
 
 let colorChoices = ['red', 'blue', 'green', 'yellow'];
 let newColor;
@@ -117,6 +115,7 @@ function compareChoice() {
 			console.log('SUCCESS');
 		} else {
 			message.innerText = 'GAME OVER';
+			gameboard.removeEventListener('click', handlePlayerClick, false);
 			if (currentScore > highScore) {
 				highScore = currentScore;
 				highScoreTracker.innerText = currentScore;
@@ -151,6 +150,8 @@ function resetGame() {
 	gameboard.removeEventListener('click', handlePlayerClick, false);
 }
 
+openBtn.addEventListener('click', openHowTo);
+
 function openHowTo() {
 	howToPage.style.display = 'block';
 }
@@ -158,7 +159,5 @@ function openHowTo() {
 function closeHowTo() {
 	howToPage.style.display = 'none';
 }
-
-openBtn.addEventListener('click', openHowTo);
 
 close.addEventListener('click', closeHowTo);

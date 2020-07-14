@@ -12,6 +12,13 @@ body {
 .navBar {
 	grid-column: 1 / span 3;
 	display: flex;
+	justify-content: space-between;
+}
+
+i {
+	color: white;
+	margin-right: 50px;
+	margin-top: 20px;
 }
 
 header {
@@ -22,10 +29,6 @@ header {
 h2 {
 	margin: 0;
 }
-
-/* header h2 {
-
-} */
 
 /* ////////////// GAME BOARD ///////////// */
 
