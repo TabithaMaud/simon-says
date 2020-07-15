@@ -16,6 +16,7 @@ let currentScore = 0;
 const message = document.querySelector('h2');
 let level = 1;
 
+let gameover = false;
 let computerArray = [];
 let playerChoice = [];
 
@@ -44,6 +45,7 @@ function muteGame() {
 startBtn.addEventListener('click', startGame);
 
 function startGame() {
+	gameover = false;
 	levelTracker.innerText = `${level}`;
 	startBtn.style.display = 'none';
 	setTimeout(addRandomColor, 1000);
@@ -58,6 +60,10 @@ function addRandomColor() {
 function displayExistingColors() {
 	message.innerHTML = '';
 	for (let i = 0; i < computerArray.length; i++) {
+		if (gameover === true) {
+			console.log('gameover is true');
+			return;
+		}
 		setTimeout(function () {
 			if (computerArray[i] === 'red') {
 				boxes[0].style.backgroundColor = 'red';
@@ -123,11 +129,9 @@ function compareChoice() {
 	let length = playerChoice.length;
 	let newComputerArray = computerArray.slice(0, length);
 	for (let i = 0; i < newComputerArray.length; i++) {
-		// if (newComputerArray[i] === playerChoice[i]) {
-		// 	console.log('SUCCESS');
-		// } else
 		if (newComputerArray[i] !== playerChoice[i]) {
 			message.innerText = 'GAME OVER';
+			gameover = true;
 			gameboard.removeEventListener('click', handlePlayerClick, false);
 			if (currentScore > highScore) {
 				highScore = currentScore;
@@ -151,6 +155,7 @@ function compareChoice() {
 resetBtn.addEventListener('click', resetGame);
 
 function resetGame() {
+	gameover = true;
 	computerArray = [];
 	playerChoice = [];
 	level = 1;
