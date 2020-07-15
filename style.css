@@ -7,22 +7,18 @@ body {
 	grid-template-rows: 30px 150px 5fr;
 	background-color: hsl(0, 0%, 16%);
 	color: #616468;
+	margin: 0;
 }
 
 header {
 	grid-column: 2;
 	color: white;
-
 }
 
 header > h1 {
 	font-family: 'Righteous', cursive;
 	font-size: 3em;
-	margin: 15px 0 15px 0;;
-
-}
-
-
+	margin: 15px 0 15px 0;
 }
 
 h2 {
@@ -146,7 +142,7 @@ button {
 }
 
 .startBtn {
-	border: 3px solid white;
+	border: 3px solid #616468;
 	background-color: #282828;
 	color: white;
 }
@@ -191,7 +187,7 @@ button {
 }
 
 #howTo-textbox > h1 {
-	color: #4CAF50;
+	color: #4caf50;
 	padding-bottom: 25px;
 	font-size: 2em;
 	font-family: 'Righteous', cursive;
@@ -234,11 +230,8 @@ button {
 		margin: 30px auto;
 	}
 
-
-header > h1 {
-	font-family: 'Righteous', cursive;
-	font-size: 2em;
-
-}
-
+	header > h1 {
+		font-family: 'Righteous', cursive;
+		font-size: 2em;
+	}
 }
