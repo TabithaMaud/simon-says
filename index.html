@@ -8,29 +8,35 @@
 			src="https://kit.fontawesome.com/45f0c2b4d3.js"
 			crossorigin="anonymous"
 		></script>
-
+		<link
+			href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+			rel="stylesheet"
+		/>
 		<title>Simon Says Pick A Color</title>
 	</head>
 	<body>
-		<audio id="sound1">
-			<source src="sound1.wav" />
-		</audio>
-		<audio id="sound2">
-			<source src="sound2.wav" />
-		</audio>
-		<audio id="sound3">
-			<source src="sound3.wav" />
-		</audio>
-		<audio id="sound4">
-			<source src="sound4.wav" />
-		</audio>
+		<container class="sounds" aria-hidden="true">
+			<audio id="sound1">
+				<source src="sound1.wav" />
+			</audio>
+			<audio id="sound2">
+				<source src="sound2.wav" />
+			</audio>
+			<audio id="sound3">
+				<source src="sound3.wav" />
+			</audio>
+			<audio id="sound4">
+				<source src="sound4.wav" />
+			</audio>
+		</container>
 
 		<div class="navBar">
 			<a class="howToPlayBtns" id="openHowToPlay">
 				how to play
 			</a>
-			<i class="fa fa-volume-up" aria-hidden="true"></i>
+			<i class="fa fa-volume-up"></i>
 		</div>
+
 		<div id="howToPage">
 			<div id="howTo-textbox">
 				<h1>Learn how to play!</h1>
@@ -48,7 +54,7 @@
 				</p>
 				<p>
 					Each time you make a correct selection your score will increase by
-					one. Good luck!
+					one.
 				</p>
 				<div id="howToFooter">
 					<button class="howToPlayBtns" id="close">Close</button>
@@ -61,26 +67,28 @@
 			<button class="startBtn">START</button>
 			<h2></h2>
 		</header>
-		<main class="gameboard">
-			<div class="box" data-color="red"></div>
-			<div class="box" data-color="blue"></div>
-			<div class="box" data-color="green"></div>
-			<div class="box" data-color="yellow"></div>
+
+		<main class="boards">
+			<main class="gameboard">
+				<div class="box" data-color="red"></div>
+				<div class="box" data-color="blue"></div>
+				<div class="box" data-color="green"></div>
+				<div class="box" data-color="yellow"></div>
+			</main>
+
+			<container class="scoreboard">
+				<h2>LEVEL: <span class="levelTracker">1</span></h2>
+				<div>
+					<h2 class="highScoreTracker">High Score</h2>
+					<p class="highScore">0</p>
+				</div>
+				<div>
+					<h2>Current Score</h2>
+					<p class="score">0</p>
+				</div>
+				<button class="resetBtn">RESET</button>
+			</container>
 		</main>
-
-		<container class="scoreboard">
-			<h2>LEVEL: <span class="levelTracker">1</span></h2>
-			<div>
-				<h2 class="highScoreTracker">High Score</h2>
-				<p class="highScore">0</p>
-			</div>
-			<div>
-				<h2>Current Score</h2>
-				<p class="score">0</p>
-			</div>
-
-			<button class="resetBtn">RESET</button>
-		</container>
 
 		<script src="script.js"></script>
 	</body>

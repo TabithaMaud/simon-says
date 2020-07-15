@@ -1,10 +1,10 @@
 body {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
-	min-height: 100vh;
+	max-height: 100vh;
 	display: grid;
-	grid-template-columns: 2fr 3fr 2fr;
-	grid-template-rows: 30px 150px 4fr 1fr;
+	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-rows: 30px 150px 5fr;
 	background-color: hsl(0, 0%, 16%);
 	color: #616468;
 }
@@ -12,6 +12,17 @@ body {
 header {
 	grid-column: 2;
 	color: white;
+
+}
+
+header > h1 {
+	font-family: 'Righteous', cursive;
+	font-size: 3em;
+	margin: 15px 0 15px 0;;
+
+}
+
+
 }
 
 h2 {
@@ -52,13 +63,21 @@ i {
 
 /* ////////////// GAME BOARD ///////////// */
 
-.gameboard {
+.boards {
 	grid-column: 2;
+	display: flex;
+	justify-content: center;
+	/* padding-top: 30px;
+	padding-bottom: 30px; */
+}
+
+.gameboard {
+	/* grid-column: 2; */
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	height: 70vmin;
 	width: 70vmin;
-	margin: auto;
+	/* margin: auto; */
 }
 
 .box {
@@ -93,7 +112,7 @@ i {
 	margin: 15px;
 	background-color: #1e1e1e;
 	border-radius: 20px;
-	grid-column: 3;
+	/* grid-column: 3; */
 	min-width: 280px;
 	display: flex;
 	flex-direction: column;
@@ -103,13 +122,13 @@ i {
 
 .highScore,
 .score {
-	font-size: 5em;
+	font-size: 3.5em;
 	color: white;
 	margin: 0;
 }
 
 .scoreboard > h2 {
-	padding: 0px 30px 30px 30px;
+	padding: 0px 30px 20px 30px;
 	border-bottom: 3px solid #616468;
 }
 
@@ -119,11 +138,17 @@ button {
 	width: 120px;
 	height: 50px;
 	border: none;
-	background-color: black;
-	color: white;
+	/* background-color: black; */
+	/* color: white; */
 	outline: none;
 	border-radius: 3px;
 	cursor: pointer;
+}
+
+.startBtn {
+	border: 3px solid white;
+	background-color: #282828;
+	color: white;
 }
 
 .resetBtn {
@@ -166,6 +191,54 @@ button {
 }
 
 #howTo-textbox > h1 {
-	color: red;
+	color: #4CAF50;
 	padding-bottom: 25px;
+	font-size: 2em;
+	font-family: 'Righteous', cursive;
+}
+
+.sounds {
+	display: none;
+}
+
+@media (max-width: 850px) {
+	body {
+		display: grid;
+		grid-template-columns: 20px 1fr 20px;
+		min-height: 100%;
+	}
+
+	.boards {
+		display: grid;
+		grid-template-columns: 1;
+		grid-template-rows: 2;
+		gap: 10;
+	}
+
+	.scoreboard {
+		margin: 15px;
+		background-color: #1e1e1e;
+		border-radius: 20px;
+		/* grid-column: 3; */
+		height: 450px;
+		min-width: 280px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	#howTo-textbox {
+		height: 400px;
+		width: 400px;
+		margin: 30px auto;
+	}
+
+
+header > h1 {
+	font-family: 'Righteous', cursive;
+	font-size: 2em;
+
+}
+
 }
