@@ -10,10 +10,12 @@ const resetBtn = document.querySelector('.resetBtn');
 
 const levelTracker = document.querySelector('.levelTracker');
 const highScoreTracker = document.querySelector('.highScore');
-let highScore = 0;
 const score = document.querySelector('.score');
-let currentScore = 0;
 const message = document.querySelector('h2');
+
+let highScore = 0;
+highScoreTracker.innerText = localStorage.getItem('high score');
+let currentScore = 0;
 let level = 1;
 
 let gameover = false;
@@ -135,7 +137,10 @@ function compareChoice() {
 			gameboard.removeEventListener('click', handlePlayerClick, false);
 			if (currentScore > highScore) {
 				highScore = currentScore;
-				highScoreTracker.innerText = currentScore;
+				localStorage.setItem('high score', highScore);
+				highScoreTracker.innerText = localStorage.getItem('high score');
+				// highScoreTracker.innerText = currentScore;
+
 				message.innerText = 'Game Over: HIGH SCORE!!!!';
 			}
 			return;

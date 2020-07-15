@@ -202,7 +202,8 @@ button {
 	body {
 		display: grid;
 		grid-template-columns: 1px 1fr 1px;
-		height: 1000px;
+		height: 1500px;
+		margin: 0;
 	}
 
 	.boards {
