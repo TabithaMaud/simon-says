@@ -11,7 +11,7 @@ const resetBtn = document.querySelector('.resetBtn');
 const levelTracker = document.querySelector('.levelTracker');
 const highScoreTracker = document.querySelector('.highScore');
 const score = document.querySelector('.score');
-const message = document.querySelector('h2');
+const message = document.querySelector('#message');
 
 let highScore = 0;
 highScoreTracker.innerText = localStorage.getItem('high score');
@@ -49,6 +49,7 @@ startBtn.addEventListener('click', startGame);
 function startGame() {
 	gameover = false;
 	levelTracker.innerText = `${level}`;
+	document.querySelector('#title').style.color = '#616468';
 	startBtn.style.display = 'none';
 	setTimeout(addRandomColor, 1000);
 }
@@ -62,11 +63,11 @@ function addRandomColor() {
 function displayExistingColors() {
 	message.innerHTML = '';
 	for (let i = 0; i < computerArray.length; i++) {
-		if (gameover === true) {
-			console.log('gameover is true');
-			return;
-		}
 		setTimeout(function () {
+			if (gameover === true) {
+				console.log('gameover is true');
+				return;
+			}
 			if (computerArray[i] === 'red') {
 				boxes[0].style.backgroundColor = 'red';
 				sound1.play();
@@ -139,8 +140,6 @@ function compareChoice() {
 				highScore = currentScore;
 				localStorage.setItem('high score', highScore);
 				highScoreTracker.innerText = localStorage.getItem('high score');
-				// highScoreTracker.innerText = currentScore;
-
 				message.innerText = 'Game Over: HIGH SCORE!!!!';
 			}
 			return;
@@ -160,6 +159,7 @@ function compareChoice() {
 resetBtn.addEventListener('click', resetGame);
 
 function resetGame() {
+	document.querySelector('#title').style.color = 'white';
 	gameover = true;
 	computerArray = [];
 	playerChoice = [];
