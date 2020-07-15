@@ -107,7 +107,8 @@ function handlePlayerClick(e) {
 			}
 			if (color === 'green') {
 				sound3.play();
-			} else {
+			}
+			if (color === 'yellow') {
 				sound4.play();
 			}
 			setTimeout(function () {
@@ -122,9 +123,10 @@ function compareChoice() {
 	let length = playerChoice.length;
 	let newComputerArray = computerArray.slice(0, length);
 	for (let i = 0; i < newComputerArray.length; i++) {
-		if (newComputerArray[i] === playerChoice[i]) {
-			console.log('SUCCESS');
-		} else {
+		// if (newComputerArray[i] === playerChoice[i]) {
+		// 	console.log('SUCCESS');
+		// } else
+		if (newComputerArray[i] !== playerChoice[i]) {
 			message.innerText = 'GAME OVER';
 			gameboard.removeEventListener('click', handlePlayerClick, false);
 			if (currentScore > highScore) {

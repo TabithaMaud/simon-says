@@ -36,7 +36,7 @@ h2 {
 #openHowToPlay {
 	background-color: #282828;
 	margin-top: 20px;
-	margin-left: 50px;
+	margin-left: 70px;
 	color: #616468;
 	cursor: pointer;
 }
@@ -48,9 +48,10 @@ h2 {
 
 i {
 	color: white;
-	margin-right: 50px;
+	margin-right: 70px;
 	margin-top: 20px;
 	font-size: 1.5em;
+	cursor: pointer;
 }
 
 .fa-volume-off {
