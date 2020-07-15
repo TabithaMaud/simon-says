@@ -9,22 +9,6 @@ body {
 	color: #616468;
 }
 
-.navBar {
-	grid-column: 1 / span 3;
-	display: flex;
-	justify-content: space-between;
-}
-
-i {
-	color: white;
-	margin-right: 50px;
-	margin-top: 20px;
-}
-
-.muted {
-	display: none;
-}
-
 header {
 	grid-column: 2;
 	color: white;
@@ -32,6 +16,38 @@ header {
 
 h2 {
 	margin: 0;
+}
+
+/* ////////////// NAV BAR ///////////// */
+
+.navBar {
+	grid-column: 1 / span 3;
+	display: flex;
+	justify-content: space-between;
+}
+
+#openHowToPlay {
+	background-color: #282828;
+	margin-top: 20px;
+	margin-left: 50px;
+	color: #616468;
+	cursor: pointer;
+}
+
+#openHowToPlay:hover {
+	border-radius: 0;
+	color: white;
+}
+
+i {
+	color: white;
+	margin-right: 50px;
+	margin-top: 20px;
+	font-size: 1.5em;
+}
+
+.fa-volume-off {
+	color: #616468;
 }
 
 /* ////////////// GAME BOARD ///////////// */
@@ -93,8 +109,7 @@ h2 {
 }
 
 .scoreboard > h2 {
-	padding-bottom: 10px;
-	padding: 0px 30px 10px 30px;
+	padding: 0px 30px 30px 30px;
 	border-bottom: 3px solid #616468;
 }
 
@@ -117,17 +132,6 @@ button {
 	color: #616468;
 }
 .resetBtn:hover {
-	color: white;
-}
-
-#openHowToPlay {
-	background-color: #282828;
-	margin-left: 20px;
-	color: #616468;
-}
-
-#openHowToPlay:hover {
-	border-radius: 0;
 	color: white;
 }
 
@@ -159,4 +163,9 @@ button {
 
 #howToFooter {
 	text-align: right;
+}
+
+#howTo-textbox > h1 {
+	color: red;
+	padding-bottom: 25px;
 }

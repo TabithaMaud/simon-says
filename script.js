@@ -64,30 +64,30 @@ function displayExistingColors() {
 				sound1.play();
 				setTimeout(function () {
 					boxes[0].style.background = '';
-				}, 1000);
+				}, 750);
 			}
 			if (computerArray[i] === 'blue') {
 				boxes[1].style.backgroundColor = 'blue';
 				sound2.play();
 				setTimeout(function () {
 					boxes[1].style.background = '';
-				}, 1000);
+				}, 750);
 			}
 			if (computerArray[i] === 'green') {
 				boxes[2].style.backgroundColor = 'green';
 				sound3.play();
 				setTimeout(function () {
 					boxes[2].style.background = '';
-				}, 1000);
+				}, 750);
 			}
 			if (computerArray[i] === 'yellow') {
 				boxes[3].style.backgroundColor = 'yellow';
 				sound4.play();
 				setTimeout(function () {
 					boxes[3].style.background = '';
-				}, 1000);
+				}, 750);
 			}
-		}, i * 1500);
+		}, i * 1250);
 	}
 	gameboard.addEventListener('click', handlePlayerClick);
 }
