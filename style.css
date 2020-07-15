@@ -201,7 +201,7 @@ button {
 @media (max-width: 850px) {
 	body {
 		display: grid;
-		grid-template-columns: 20px 1fr 20px;
+		grid-template-columns: 1px 1fr 1px;
 		height: 1000px;
 	}
 
@@ -209,9 +209,6 @@ button {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		/* display: grid;
-		grid-template-columns: 1;
-		grid-template-rows: 2; */
 		gap: 10;
 		margin: 0;
 	}
@@ -227,6 +224,12 @@ button {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
+	}
+
+	.box {
+		border: 2.5px solid;
+		margin: 7px;
+		border-radius: 20px;
 	}
 
 	#howTo-textbox {
