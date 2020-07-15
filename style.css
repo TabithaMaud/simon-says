@@ -58,7 +58,7 @@ i {
 	color: #616468;
 }
 
-/* ////////////// GAME BOARD ///////////// */
+/* ////////////// GAME BOARD //////////// */
 
 .boards {
 	grid-column: 2;
@@ -202,14 +202,18 @@ button {
 	body {
 		display: grid;
 		grid-template-columns: 20px 1fr 20px;
-		min-height: 100%;
+		height: 1000px;
 	}
 
 	.boards {
-		display: grid;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* display: grid;
 		grid-template-columns: 1;
-		grid-template-rows: 2;
+		grid-template-rows: 2; */
 		gap: 10;
+		margin: 0;
 	}
 
 	.scoreboard {
@@ -228,7 +232,7 @@ button {
 	#howTo-textbox {
 		height: 400px;
 		width: 400px;
-		margin: 30px auto;
+		margin: 0 auto;
 	}
 
 	header > h1 {
