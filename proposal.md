@@ -8,8 +8,6 @@ My app is called Simon Says Pick A Color. It's a game for players to test their 
 
 Each time a player makes a correct selection their score will increase by one, which will be displayed on a scoreboard. This will also be a space to hold the player's current high score.
 
-I'd like to include symbols and sound if possible for each selection, as both could make the game more accessible and engaging.
-
 ## Wire Frames
 
 **Initial Landing View**
