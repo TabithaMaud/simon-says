@@ -13,7 +13,7 @@ const highScoreTracker = document.querySelector('.highScore');
 const score = document.querySelector('.score');
 const message = document.querySelector('#message');
 
-let highScore = 0;
+let highScore = localStorage.getItem('high score');
 highScoreTracker.innerText = localStorage.getItem('high score');
 let currentScore = 0;
 let level = 1;
@@ -62,10 +62,10 @@ function addRandomColor() {
 
 function displayExistingColors() {
 	message.innerHTML = '';
+	gameboard.removeEventListener('click', handlePlayerClick, false);
 	for (let i = 0; i < computerArray.length; i++) {
 		setTimeout(function () {
 			if (gameover === true) {
-				console.log('gameover is true');
 				return;
 			}
 			if (computerArray[i] === 'red') {
@@ -98,7 +98,9 @@ function displayExistingColors() {
 			}
 		}, i * 1250);
 	}
-	gameboard.addEventListener('click', handlePlayerClick);
+	setTimeout(function () {
+		gameboard.addEventListener('click', handlePlayerClick);
+	}, (computerArray.length - 1) * 1250);
 }
 
 function handlePlayerClick(e) {
@@ -135,12 +137,13 @@ function compareChoice() {
 		if (newComputerArray[i] !== playerChoice[i]) {
 			message.innerText = 'GAME OVER';
 			gameover = true;
+			resetBtn.classList.add('resetActive');
 			gameboard.removeEventListener('click', handlePlayerClick, false);
 			if (currentScore > highScore) {
 				highScore = currentScore;
 				localStorage.setItem('high score', highScore);
 				highScoreTracker.innerText = localStorage.getItem('high score');
-				message.innerText = 'Game Over: HIGH SCORE!!!!';
+				message.innerText = 'Game Over: HIGH SCORE!';
 			}
 			return;
 		}
@@ -159,6 +162,7 @@ function compareChoice() {
 resetBtn.addEventListener('click', resetGame);
 
 function resetGame() {
+	resetBtn.classList.remove('resetActive');
 	document.querySelector('#title').style.color = 'white';
 	gameover = true;
 	computerArray = [];

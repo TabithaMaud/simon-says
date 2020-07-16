@@ -4,7 +4,7 @@ body {
 	max-height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr 6fr 1fr;
-	grid-template-rows: 30px 150px 5fr;
+	grid-template-rows: 30px 1.75fr 5fr;
 	background-color: hsl(0, 0%, 16%);
 	color: #616468;
 	margin: 0;
@@ -18,7 +18,7 @@ header {
 #title {
 	font-family: 'Righteous', cursive;
 	font-size: 3em;
-	margin: 15px 0 10px 0;
+	margin: 15px 0 15px 0;
 }
 
 #message {
@@ -52,7 +52,7 @@ i {
 	color: white;
 	margin-right: 70px;
 	margin-top: 20px;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	cursor: pointer;
 }
 
@@ -71,8 +71,10 @@ i {
 .gameboard {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	height: 70vmin;
-	width: 70vmin;
+	/* height: 70vmin;
+	width: 70vmin; */
+	height: 70vh;
+	width: 70vh;
 }
 
 .box {
@@ -136,8 +138,8 @@ i {
 /* ////////////// BUTTONS ///////////// */
 
 button {
-	width: 120px;
-	height: 50px;
+	width: 168px;
+	height: 57px;
 	border: none;
 	outline: none;
 	border-radius: 3px;
@@ -152,12 +154,6 @@ button {
 }
 
 .startBtn {
-	border: 3px solid #616468;
-	background-color: #282828;
-	color: white;
-}
-
-.startBtn:hover {
 	color: white;
 	background-color: #4caf50;
 	border: #4caf50;
@@ -170,6 +166,12 @@ button {
 	margin-bottom: 15px;
 }
 .resetBtn:hover {
+	color: white;
+}
+
+.resetActive {
+	border: 3px solid #4caf50;
+	background-color: #1e1e1e;
 	color: white;
 }
 
