@@ -34,8 +34,13 @@ Stretch
 
 - As a player I would like to increase the difficulty by having 6 colors instead of 4.
 
-## Sound Effects
+## Sound Effects Attribution:
 
 Sound effects were created be kennel.nl
 They are free assets to be used in any project, personal or commercial use.
 Attribution is not required, but is greatly appreciated.
+
+## Animation Attribution:
+
+Created and altered animation from an example code found on w3schools.com
+https://www.w3schools.com/howto/howto_css_shake_image.asp

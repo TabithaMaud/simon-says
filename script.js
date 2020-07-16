@@ -137,6 +137,8 @@ function compareChoice() {
 		if (newComputerArray[i] !== playerChoice[i]) {
 			message.innerText = 'GAME OVER';
 			gameover = true;
+			gameboard.classList.add('gameOverAnimation');
+
 			resetBtn.classList.add('resetActive');
 			gameboard.removeEventListener('click', handlePlayerClick, false);
 			if (currentScore > highScore) {
@@ -162,6 +164,7 @@ function compareChoice() {
 resetBtn.addEventListener('click', resetGame);
 
 function resetGame() {
+	gameboard.classList.remove('gameOverAnimation');
 	resetBtn.classList.remove('resetActive');
 	document.querySelector('#title').style.color = 'white';
 	gameover = true;
