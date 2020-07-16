@@ -47,11 +47,12 @@ function muteGame() {
 startBtn.addEventListener('click', startGame);
 
 function startGame() {
+	startSound.play();
 	gameover = false;
 	levelTracker.innerText = `${level}`;
 	document.querySelector('#title').style.color = '#616468';
 	startBtn.style.display = 'none';
-	setTimeout(addRandomColor, 1000);
+	setTimeout(addRandomColor, 2000);
 }
 
 function addRandomColor() {
