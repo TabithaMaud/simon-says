@@ -36,7 +36,7 @@ Stretch
 
 ## Sound Effects Attribution:
 
-Sound effects were created be kennel.nl
+Sound effects were created by kennel.nl
 They are free assets to be used in any project, personal or commercial use.
 Attribution is not required, but is greatly appreciated.
 

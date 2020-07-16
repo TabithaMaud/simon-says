@@ -23,7 +23,6 @@ let computerArray = [];
 let playerChoice = [];
 
 let colorChoices = ['red', 'blue', 'green', 'yellow'];
-let newColor;
 
 let gameVolume = document.querySelector('i');
 
@@ -56,16 +55,22 @@ function startGame() {
 }
 
 function addRandomColor() {
+	let newColor;
 	newColor = colorChoices[Math.floor(Math.random() * 4)];
 	computerArray.push(newColor);
 	displayExistingColors();
 }
+
+/***************************
+ * Computer displaying array
+ ****************************/
 
 function displayExistingColors() {
 	message.innerHTML = '';
 	gameboard.removeEventListener('click', handlePlayerClick, false);
 	for (let i = 0; i < computerArray.length; i++) {
 		setTimeout(function () {
+			// if gameover = true, exit forloop
 			if (gameover === true) {
 				return;
 			}
@@ -104,6 +109,10 @@ function displayExistingColors() {
 	}, (computerArray.length - 1) * 1250);
 }
 
+/***************************
+ * Player clicks
+ ****************************/
+
 function handlePlayerClick(e) {
 	e.preventDefault();
 	if (e.target.classList.contains('box')) {
@@ -137,6 +146,7 @@ function compareChoice() {
 	for (let i = 0; i < newComputerArray.length; i++) {
 		if (newComputerArray[i] !== playerChoice[i]) {
 			message.innerText = 'GAME OVER';
+			// gameover = true, will stop for loop running full computer array.
 			gameover = true;
 			gameboard.classList.add('gameOverAnimation');
 

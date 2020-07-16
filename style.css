@@ -39,6 +39,9 @@
 	}
 }
 
+/* Created and altered animation from an example code found on w3schools.com
+https://www.w3schools.com/howto/howto_css_shake_image.asp */
+
 body {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
@@ -255,6 +258,8 @@ button {
 .sounds {
 	display: none;
 }
+
+/* ////////////// MOBILE ADJUSTMENTS ///////////// */
 
 @media (max-width: 850px) {
 	body {
