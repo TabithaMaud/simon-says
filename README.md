@@ -1,6 +1,21 @@
 # Simon Says Pick A Color
 
-A game in HTML, CSS and JS
+A game in HTML, CSS, JS and utilizing local storage.
+
+View the deployed version here: https://tabithamaud.github.io/simon-says/
+
+![image](https://user-images.githubusercontent.com/66636074/102788292-66801400-4370-11eb-8624-11af8611bad5.png)
+
+## Wire Frames
+
+**Initial Landing View**
+
+![image](https://user-images.githubusercontent.com/66636074/87163493-73fb8300-c295-11ea-9489-302ad9baf71a.png)
+
+**Results View**
+
+![image](https://user-images.githubusercontent.com/66636074/87163572-8ecdf780-c295-11ea-98f5-5749c8144927.png)
+
 
 ## User Stories
 
@@ -33,6 +48,11 @@ Stretch
 - As a player I would like the option for a sound to happen when a color displays so it's more interactive and engaging.
 
 - As a player I would like to increase the difficulty by having 6 colors instead of 4.
+
+## Getting Started:
+
+Check it out! Fork, clone and run the application.
+
 
 ## Sound Effects Attribution:
 
